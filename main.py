@@ -25,6 +25,7 @@ logger = logging.getLogger(__name__)
 def get_iss_location():
     url = "http://api.open-notify.org/iss-now.json"
     try:
+        logger.info("Getting current ISS location🌍")
         response = requests.get(url)
         r = response.json()
 
